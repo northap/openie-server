@@ -24,7 +24,7 @@ import edu.knowitall.tool.srl.ClearSrl;
 import edu.knowitall.tool.tokenize.ClearTokenizer;
 
 public class OpenIEServer {
-    private static final String HOSTNAME = "localhost";
+    private static String HOSTNAME = "localhost";
     private static int PORT = 8080; // default; allow custom setting as well
     private static final int BACKLOG = 1;
 
