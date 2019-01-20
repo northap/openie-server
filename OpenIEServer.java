@@ -49,11 +49,12 @@ public class OpenIEServer {
 
     public static void main(final String... args) throws IOException {
         if (args.length < 1) {
-            LOGGER.info("Serving Openie 5.0 on default port: " + PORT);
+            LOGGER.info("Serving Openie 5.0 on default port: " + HOSTNAME + " " + PORT);
         }
         else {
-            PORT = Integer.parseInt(args[0]);
-            LOGGER.info("Serving Openie 5.0 on port: " + PORT);
+            HOSTNAME = args[0];
+            PORT = Integer.parseInt(args[1]);
+            LOGGER.info("Serving Openie 5.0 on port: " + HOSTNAME + " " + PORT);
         }
 
         final HttpServer server = HttpServer.create(new InetSocketAddress(HOSTNAME, PORT), BACKLOG);
