@@ -58,8 +58,8 @@ public class OpenIEServer {
 
         final HttpServer server = HttpServer.create(new InetSocketAddress(HOSTNAME, PORT), BACKLOG);
 
-        OpenIE openIE = new OpenIE(new ClearParser(new ClearPostagger(new ClearTokenizer(ClearTokenizer.defaultModelUrl()))),
-                new ClearSrl(), false);
+        OpenIE openIE = new OpenIE(new ClearParser(new ClearPostagger(new ClearTokenizer())),
+                new ClearSrl(), false, false);
         LOGGER.info("Finished loading Openie...");
 
         server.createContext("/", he -> {
