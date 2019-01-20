@@ -49,11 +49,11 @@ public class OpenIEServer {
 
     public static void main(final String... args) throws IOException {
         if (args.length < 1) {
-            LOGGER.info("Serving Openie 4.1 on default port: " + PORT);
+            LOGGER.info("Serving Openie 5.0 on default port: " + PORT);
         }
         else {
             PORT = Integer.parseInt(args[0]);
-            LOGGER.info("Serving Openie 4.1 on port: " + PORT);
+            LOGGER.info("Serving Openie 5.0 on port: " + PORT);
         }
 
         final HttpServer server = HttpServer.create(new InetSocketAddress(HOSTNAME, PORT), BACKLOG);
@@ -176,10 +176,10 @@ public class OpenIEServer {
 
             sb.append("\"arg2s\":"); // begin list of arg2s
             sb.append("[");
-            Iterator<Part> argIter = inst.extr().arg2s().iterator();
+            Iterator<Argument> argIter = inst.extr().arg2s().iterator();
             while (argIter.hasNext()) {
                 sb.append("\"");
-                Part arg = argIter.next();
+                Argument arg = argIter.next();
                 sb.append(arg.text());
                 sb.append("\"");
                 sb.append(",");

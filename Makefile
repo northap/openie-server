@@ -1,6 +1,6 @@
 all: OpenIEServer.class
 
-openie = ./openie-4.1.jar
+openie = ./openie-5.0.jar
 
 OpenIEServer.class: OpenIEServer.java
 	javac -cp $(openie) OpenIEServer.java
