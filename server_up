@@ -4,4 +4,4 @@
 openie=./openie-5.0.jar
 
 # port number optional; default is 8080
-java -Xmx10g -XX:+UseConcMarkSweepGC -cp .:$openie OpenIEServer 9001
+java -Xmx10g -XX:+UseConcMarkSweepGC -cp .:$openie OpenIEServer localhost 9001
