@@ -133,9 +133,6 @@ public class OpenIEServer {
         sb.append("["); // begin instances list
 
         Seq<Instance> extractions = openie.extract(text);
-
-        LOGGER.info(extractions);
-
         Iterator<Instance> iterator = extractions.iterator();
         while (iterator.hasNext()) {
             Instance inst = iterator.next();
